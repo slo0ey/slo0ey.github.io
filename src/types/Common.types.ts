@@ -1,5 +1,5 @@
 export type Introduction = {
   title: string,
-  description: string[],
+  subtitle: string[],
   army_timer: string
 };
