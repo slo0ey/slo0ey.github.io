@@ -8,11 +8,12 @@ const MenuWrapper = styled.div`
   grid-template-columns: repeat(5, 1fr);
   text-align: center;
   align-items: center;
+  user-select: none;
   color: #fff;
   border-top: 1px solid white;
 `;
 
-const MenuItem = styled.div`
+const MenuItem = styled.a`
   font-size: 20px;
   border-right: 1px solid #fff;
 
@@ -28,9 +29,13 @@ const Menu: FC = () => {
       <MenuItem>할일</MenuItem>
       <MenuItem>상태</MenuItem>
       <MenuItem>뭐넣지</MenuItem>
-      <MenuItem style={{
-        borderRight: 'none'
-      }}>흐음..</MenuItem>
+      <MenuItem
+        style={{
+          borderRight: 'none',
+        }}
+      >
+        흐음..
+      </MenuItem>
     </MenuWrapper>
   );
 };

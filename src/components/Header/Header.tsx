@@ -9,22 +9,34 @@ type HeaderProps = {
   subtitle: string[];
 };
 
+type SocialProps = {
+  name: string;
+  id: string;
+  icon: string;
+  url: string;
+};
+
 //TODO: 마저 만들기
 const HeaderWrapper = styled.header`
   width: 100%;
   background-image: linear-gradient(60deg, #f78563, #bfce63);
 `;
 
-const Header: FC<HeaderProps> = ({ 
-  title,
-  subtitle
-}) => {
+const SocialItem: FC<SocialProps> = ({ name, id, icon, url }) => {
+  return (
+    <li>
+      <a href={url}>
+        <img src={icon} alt={name} />
+        <span>{id}</span>
+      </a>
+    </li>
+  );
+};
+
+const Header: FC<HeaderProps> = ({ title, subtitle }) => {
   return (
     <HeaderWrapper>
-      <Title
-        title={title}
-        subtitle={subtitle}
-      />
+      <Title title={title} subtitle={subtitle} />
       <Menu />
     </HeaderWrapper>
   );

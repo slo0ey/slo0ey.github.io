@@ -8,12 +8,12 @@ const globalStyle = css`
   body {
     font-family: 'Gamja Flower', cursive;
     box-sizing: border-box;
-    padding: 0
+    padding: 0;
   }
 `;
 
 const GlobalStyle = () => {
   return <Global styles={globalStyle} />;
-}
+};
 
 export default GlobalStyle;

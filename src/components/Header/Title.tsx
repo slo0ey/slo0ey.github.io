@@ -15,10 +15,17 @@ const TitleWrapper = styled.div`
   align-items: center;
   text-align: center;
   color: #fff;
+  user-select: none;
 
   @media (max-width: 960px) {
     width: 100%;
     height: 200px;
+    grid-template-rows: 80px 1fr;
+  }
+
+  @media (max-width: 400px) {
+    width: 100%;
+    height: 150px;
   }
 `;
 
@@ -38,12 +45,14 @@ const SubTitleText = styled.div`
   @media (max-width: 960px) {
     font-size: 18px;
   }
+
+  // On Mobile
+  @media (max-width: 400px) {
+    font-size: 12px;
+  }
 `;
 
-const Title: FC<TitleProps> = ({
-  title,
-  subtitle
-}) => {
+const Title: FC<TitleProps> = ({ title, subtitle }) => {
   return (
     <TitleWrapper>
       <TitleText>{title}</TitleText>
