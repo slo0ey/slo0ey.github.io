@@ -75,6 +75,12 @@ Error generating stack: `+i.message+`
   @media (max-width: 960px) {
     width: 100%;
     height: 200px;
+    grid-template-rows: 80px 1fr;
+  }
+
+  @media (max-width: 400px) {
+    width: 100%;
+    height: 150px;
   }
 `,Wm=zt.h1`
   font-size: 45px;
@@ -89,6 +95,11 @@ Error generating stack: `+i.message+`
 
   @media (max-width: 960px) {
     font-size: 18px;
+  }
+
+  // On Mobile
+  @media (max-width: 400px) {
+    font-size: 12px;
   }
 `,Km=({title:e,subtitle:t})=>Tn(Hm,{children:[fe(Wm,{children:e}),fe(Qm,{children:t.join(`
 `)})]}),Ym=zt.div`
