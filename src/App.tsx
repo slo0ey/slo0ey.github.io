@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from './components/Header/Header';
 
-import intro from './introduction.json';
+import { title, subtitle, socials } from './introduction.json';
 
 //TODO: 루트 element 채워넣기
 function App() {
@@ -9,8 +9,9 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Header 
-          title={intro.title}
-          subtitle={intro.subtitle}
+          title={title}
+          subtitle={subtitle}
+          socials={socials}
         />
         <Routes>
           <Route path='/' element={null}></Route>

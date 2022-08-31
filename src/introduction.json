@@ -10,12 +10,14 @@
     {
       "name": "github",
       "id": "slo0ey",
-      "icon": "github.svg"
+      "icon": "github.svg",
+      "url": "https://github.com/slo0ey"
     },
     {
       "name": "instagram",
       "id": "ear1y.b_rd",
-      "icon": "instagram.svg"
+      "icon": "instagram.svg",
+      "url": "https://www.instagram.com/ear1y.b_rd/"
     }
   ]
 }
