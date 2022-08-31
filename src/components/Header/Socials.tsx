@@ -16,29 +16,46 @@ type SocialItemProps = {
 
 const SocialWrapper = styled.table`
   position: absolute;
-  float: right;
-  top: 192px;
+  left: 16px;
+  top: 228px;
+
+  @media (max-width: 960px) {
+    top: 128px;
+  }
+
+  @media (max-width: 400px) {
+    top: 96px;
+    left: 8px;
+  }
 `;
 
 const SocialIcon = styled.img`
-  width: 64px;
-  height: 64px;
+  width: 24px;
+  height: 24px;
   display: inline;
+
+  @media (max-width: 400px) {
+    width: 16px;
+    height: 16px;
+  }
 `;
 
 const SocialLink = styled.a`
-  width: 104px;
-  height: 64px;
-  display: inline;
   text-decoration: none;
   color: #fff;
+
+  @media (max-width: 400px) {
+    font-size: 6px;
+  }
 `;
 
 const SocialItem: FC<SocialItemProps> = ({ name, id, icon, url }) => {
   return (
-    <tr>
-      <SocialIcon src={icon} alt={name} />
-      <SocialLink href={url}>{id}</SocialLink>
+    <tr style={{margin: '3px 0'}}>
+      <SocialLink href={url}>
+        <SocialIcon src={icon} alt={name} />
+        {' ' + id}
+      </SocialLink>
     </tr>
   );
 };
@@ -46,9 +63,11 @@ const SocialItem: FC<SocialItemProps> = ({ name, id, icon, url }) => {
 const SocialTab: FC<SocialTabProps> = ({ socials }) => {
   return (
     <SocialWrapper>
-      {socials.map((v) => (
-        <SocialItem key={v.name} name={v.name} id={v.id} icon={v.icon} url={v.url} />
-      ))}
+      <tbody>
+        {socials.map((v) => (
+          <SocialItem key={v.name} name={v.name} id={v.id} icon={v.icon} url={v.url} />
+        ))}
+      </tbody>
     </SocialWrapper>
   );
 };

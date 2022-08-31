@@ -12,18 +12,6 @@ type HeaderProps = {
   socials: SocialInfo[];
 };
 
-type SocialItemProps = {
-  name: string;
-  id: string;
-  icon: string;
-  url: string;
-};
-
-type SocialTabProps = {
-  socials: SocialInfo[];
-};
-
-//TODO: 마저 만들기
 const HeaderWrapper = styled.header`
   width: 100%;
   background-image: linear-gradient(60deg, #f78563, #bfce63);
